@@ -1,0 +1,15 @@
+name: workflow test
+on:
+  workflow_dispatch:
+jobs:
+  a_simple_job:
+    name: simple jobs
+    run-on: ubuntu-latest
+    steps:
+      - name: step 1
+        id: stepId
+        run: echo "first step"
+      - name: step with another shell
+        id: shellStep
+        shell: python
+        run: print("printing something ...")
